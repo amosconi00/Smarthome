@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\projects\tesi\SmartHome\SmarhHome\SmartHome.Backend\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-09-26T21:10:20.5386475Z||;True|2025-09-25T23:49:29.5524477+02:00||;True|2025-09-25T21:33:01.8558876+02:00||;True|2025-09-24T21:45:59.4432672+02:00||;True|2025-09-20T17:59:37.3459329+02:00||;True|2025-09-20T17:57:58.3199140+02:00||;True|2025-09-07T12:49:18.3799892+02:00||;True|2025-09-07T11:36:14.4504781+02:00||;True|2025-09-07T11:18:15.9601973+02:00||;True|2025-09-07T10:54:04.9811216+02:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

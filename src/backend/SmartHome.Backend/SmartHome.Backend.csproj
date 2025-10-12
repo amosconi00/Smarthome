@@ -1,0 +1,119 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b49ec509-6547-4006-8a3c-d89a89fce41f</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\NilmBatchController.cs" />
+    <Compile Remove="Services\NilmBatchService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="NILM\TrainedModels\normalization_stats_capsule_coffee_machine.json" />
+    <Content Remove="NILM\TrainedModels\normalization_stats_fridge.json" />
+    <Content Remove="NILM\TrainedModels\normalization_stats_smart_tv.json" />
+    <Content Remove="NILM\TrainedModels\20250920\normalization_stats_capsule_coffee_machine.json" />
+    <Content Remove="NILM\TrainedModels\20250920\normalization_stats_fridge.json" />
+    <Content Remove="NILM\TrainedModels\20250920\normalization_stats_smart_tv.json" />
+    <Content Remove="NILM\TrainedModels\20250920\training_info_capsule_coffee_machine.json" />
+    <Content Remove="NILM\TrainedModels\20250920\training_info_fridge.json" />
+    <Content Remove="NILM\TrainedModels\20250920\training_info_smart_tv.json" />
+    <Content Remove="NILM\TrainedModels\training_info_capsule_coffee_machine.json" />
+    <Content Remove="NILM\TrainedModels\training_info_fridge.json" />
+    <Content Remove="NILM\TrainedModels\training_info_smart_tv.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Meadow.MQTT" Version="2.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.22.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <!-- EF Core and Npgsql provider for PostgreSQL -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!-- AutoMapper (DI integration brings AutoMapper dependency) -->
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="NILM\TrainedModels\normalization_stats_capsule_coffee_machine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\normalization_stats_fridge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\normalization_stats_smart_tv.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\normalization_stats_capsule_coffee_machine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\normalization_stats_fridge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\normalization_stats_smart_tv.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\training_info_capsule_coffee_machine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\training_info_fridge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\20250920\training_info_smart_tv.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\training_info_capsule_coffee_machine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\training_info_fridge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="NILM\TrainedModels\training_info_smart_tv.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NILM\TrainedModels\20250920\seq2point_capsule_coffee_machine.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NILM\TrainedModels\20250920\seq2point_fridge.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NILM\TrainedModels\20250920\seq2point_smart_tv.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NILM\TrainedModels\seq2point_capsule_coffee_machine.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NILM\TrainedModels\seq2point_fridge.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NILM\TrainedModels\seq2point_smart_tv.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\.dockerignore" />
+  </ItemGroup>
+
+</Project>
